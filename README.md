@@ -1,6 +1,6 @@
 # React.JS
 
-![image](https://github.com/sanu151/React.JS/assets/68671274/4a65e28f-208c-4607-a4b8-df8f2ee993a1)
+![image](https://github.com/sanu151/React.JS/assets/68671274/e5da8d31-081f-446d-95eb-31ae804fde35)
 
 *React.JS tutorial, codes and notes*
 
