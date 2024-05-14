@@ -19,6 +19,7 @@
 * Major brands like Facebook, Instragram, Yahoo, Netflix, Airbnb, dropbox using react
 
 **React Component**
+
 ![image](https://github.com/sanu151/React.JS/assets/68671274/bbb6b75f-4465-4d84-8b67-579ad84c9828)
 
 Example: **`message.js`**
@@ -38,3 +39,6 @@ export default function Message() {
 * Download and Install VSCode -> http://code.visualstudio.com/
 * Download and Install Node.js -> http://nodejs.org/en/download/
   > Check the node version : node--version
+
+**Create first React project with Vite**
+
