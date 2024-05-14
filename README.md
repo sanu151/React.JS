@@ -13,5 +13,22 @@
 **Why React?**
 * It allows us to create a complex UI by making components (small & isolated pieces of code)
 * components are reuseable.
+* Load fast
+* External plugin
+* Around 45% of world's website use React.
+* Major brands like Facebook, Instragram, Yahoo, Netflix, Airbnb, dropbox using react
 
 **React Component**
+![image](https://github.com/sanu151/React.JS/assets/68671274/bbb6b75f-4465-4d84-8b67-579ad84c9828)
+
+Example: **`message.js`**
+```JavaScript
+import React from 'react
+export default function Message() {
+  return (
+    <h1 style={{backgroundColor: "#ffa45b", textAlign: "center}}>
+      Welcome to React
+    </h1>
+  }
+}
+```
