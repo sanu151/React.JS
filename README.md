@@ -32,3 +32,9 @@ export default function Message() {
   }
 }
 ```
+
+**Environment setup**
+
+* Download and Install VSCode -> http://code.visualstudio.com/
+* Download and Install Node.js -> http://nodejs.org/en/download/
+  > Check the node version : node--version
