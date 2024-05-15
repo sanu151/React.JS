@@ -42,3 +42,43 @@ export default function Message() {
 
 **Create first React project with Vite**
 
+*Compatibility Note* : 
+Vite requires Node.js version 18+. 20+. However, some templates require a higher Node.js version to work.
+
+*Run first react project*
+```
+F:\WebDevelopment\React.JS> npm create vite@latest
+√ Project name: ... blog-project-react
+√ Select a framework: » React // Select using Arrows
+√ Select a variant: » JavaScript // Select using Arrows
+
+Scaffolding project in F:\WebDevelopment\React.JS\blog-projcet-react...
+
+Done. Now run:
+
+  cd blog-projcet-react
+  npm install
+  npm run dev
+
+PS F:\WebDevelopment\React.JS> cd .\blog-projcet-react\
+PS F:\WebDevelopment\React.JS\blog-projcet-react> npm install
+
+added 278 packages, and audited 279 packages in 46s
+
+103 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+PS F:\WebDevelopment\React.JS\blog-projcet-react> npm run dev
+
+> blog-projcet-react@0.0.0 dev
+> vite
+
+
+  VITE v5.2.11  ready in 262 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+  ➜  press h + enter to show help
+
+```
