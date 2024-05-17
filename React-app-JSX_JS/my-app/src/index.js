@@ -11,10 +11,18 @@ const dateName = date.getDate();
 const monthName = date.getMonth();
 const yearName = date.getFullYear();
 
+// CSS
+const headingStyle = {
+  backgroundColor: "blue",
+  color: "yellow",
+  textAlign: "center",
+  padding: "15px",
+};
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <div>
-    <h1>{blogHeading}</h1>
+    <h1 style={headingStyle}>{blogHeading}</h1>
     <h3>{blogTitle}</h3>
     <p>{blogDesc}</p>
     <p>{dateName + "/" + monthName + "/" + yearName}</p>
