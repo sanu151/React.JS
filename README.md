@@ -174,3 +174,11 @@ What is JSX?
 * JSX stands for JavaScript XML
 * JSX allws us to wirte and add HTML in React.
 
+JSX and JS expressions are a powerful combination in React that allows you to write cleaner and more dynamic UIs.
+
+* **JSX (JavaScript XML)** is a syntax extension for JavaScript that resembles HTML. It lets you write HTML-like structures within your JavaScript code.
+
+* **JS Expressions** are any valid JavaScript code snippets you can embed within JSX using curly braces (`{}`). This unlocks functionalities like:
+  * **Dynamic Content:** Include variables, function calls, or calculations directly in your JSX to create elements that update based on data.
+  * **Conditional Rendering:** Use expressions within JSX to conditionally render elements based on certain conditions.  
+  * **Readability:**  Combine JSX's structure with JavaScript's power for a more intuitive way to define UI components.
