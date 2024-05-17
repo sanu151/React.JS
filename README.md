@@ -182,3 +182,6 @@ JSX and JS expressions are a powerful combination in React that allows you to wr
   * **Dynamic Content:** Include variables, function calls, or calculations directly in your JSX to create elements that update based on data.
   * **Conditional Rendering:** Use expressions within JSX to conditionally render elements based on certain conditions.  
   * **Readability:**  Combine JSX's structure with JavaScript's power for a more intuitive way to define UI components.
+
+**CSS Styling in JSX**
+
