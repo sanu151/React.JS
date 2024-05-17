@@ -167,3 +167,10 @@ To create a production build, use npm run build.
 webpack compiled successfully
 ```
 
+**JSX & JS Expression**
+
+What is JSX?
+
+* JSX stands for JavaScript XML
+* JSX allws us to wirte and add HTML in React.
+
