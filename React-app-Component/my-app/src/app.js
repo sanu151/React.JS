@@ -5,9 +5,10 @@ import Data from "./data/data.json";
 const pageHeading = "React Component";
 
 let items = [];
-for (let x = 0; x < Data.length; x++) {
-  items.push(<Card cardTitle={Data[x].title} cardBody={Data[x].para} />);
-}
+
+items = Data.map((item) => (
+  <Card cardTitle={item.title} cardBody={item.para} />
+));
 
 const App = () => {
   return (
