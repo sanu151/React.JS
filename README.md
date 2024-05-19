@@ -4,6 +4,8 @@
 
 *React.JS tutorial, codes and notes*
 
+* **Official React Documentation:** [https://legacy.reactjs.org/](https://legacy.reactjs.org/) 
+
 **What is React**
 
 * React is a flexible, efficient, open-source JavaScript libray.
@@ -220,6 +222,5 @@ React components are the fundamental building blocks of a React application. The
 
 Here are some resources to learn more about React components:
 
-* **Official React Documentation:** [https://legacy.reactjs.org/](https://legacy.reactjs.org/) 
 * **React Components Tutorial:** [https://www.w3schools.com/react/react_components.asp](https://www.w3schools.com/react/react_components.asp)
 
