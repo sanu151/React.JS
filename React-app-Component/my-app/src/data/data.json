@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Blog about React JS",
+    "para": "React JS, or simply React, is a free and open-source library for building user interfaces. It allows developers to create interactive UIs by using reusable components written in JavaScript. These components control how different parts of the UI are displayed and update efficiently when data changes. React's focus on components and its efficient rendering make it a popular choice for building complex and dynamic web applications."
+  },
+  {
+    "title": "Styling Components in JSX",
+    "para": "There are a few ways to apply CSS styles to components in JSX. The most common approach is to use a separate CSS file and reference it using the className attribute in your JSX. This keeps your styles organized and maintainable. However, JSX also allows for inline styles and CSS-in-JS libraries which can be useful for specific situations."
+  },
+  {
+    "title": "Create Component using React",
+    "para": "Creating reusable components is a core principle in React. You can define a component using either a JavaScript function (functional component) or a class. The component typically returns JSX which looks like HTML but allows embedding JavaScript.  Components can accept data as inputs through props and can render different content based on that data. You can also nest components within each other to build complex UIs.  By creating components, you can keep your code organized, maintainable, and ensure a consistent look and feel throughout your React application. "
+  }
+]

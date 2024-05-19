@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.cardDiv {
+  display: flex;
+  border: none;
+}
+
+.pageHeading {
+  background-color: purple;
+  color: wheat;
+  text-align: center;
+  padding: 15px;
+  margin: 5px 10px;
+  border-radius: 30px;
+}
+
+.card {
+  background-color: yellowgreen;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px gray;
+  width: 40%;
+}
+
+.cardTitle {
+  text-align: center;
+  padding: 6px;
+  color: blue;
+}
+
+.cardBody {
+  text-align: justify;
+  color: brown;
+  padding: 10px;
+}
+
+.footer {
+  text-align: end;
+  color: darkblue;
+  font-weight: bold;
+}
