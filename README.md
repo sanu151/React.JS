@@ -224,3 +224,38 @@ Here are some resources to learn more about React components:
 
 * **React Components Tutorial:** [https://www.w3schools.com/react/react_components.asp](https://www.w3schools.com/react/react_components.asp)
 
+**Random Unique ID**
+The `uuid` package in npm provides functionality for generating and working with Universally Unique Identifiers (UUIDs). It's a popular choice for creating unique identifiers in JavaScript applications. Here's a breakdown of what you can do with `uuid`:
+
+**Installation:**
+
+You can install the `uuid` package using npm or yarn:
+
+```bash
+npm install uuid
+```
+
+**Generating UUIDs:**
+
+The `uuid` package offers various functions to generate different versions of UUIDs:
+
+* **v1 (time-based):** Generates UUIDs based on the current time and the node's MAC address (if available). These are considered the most universally unique.
+* **v3 (name-based and MD5 hash):** Generates UUIDs based on a namespace and a string value hashed with MD5.
+* **v4 (random):** Generates random UUIDs. These are not guaranteed to be globally unique, but the probability of collision is very low.
+* **v5 (name-based and SHA-1 hash):** Generates UUIDs based on a namespace and a string value hashed with SHA-1.
+
+Here's an example of generating a v4 UUID:
+
+```javascript
+const { v4: uuidv4 } = require('uuid');
+
+const uuid = uuidv4();
+console.log(uuid); // Output: a string like '1f7b2c78-23e1-4f1b-a4d4-c72b39d3f39e'
+```
+
+or
+```JavaScript
+import { v4 as uuidv4 } from 'uuid';
+uuidv4(); // ⇨ '9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d'
+```
+
