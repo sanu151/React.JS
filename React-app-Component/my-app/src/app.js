@@ -9,8 +9,8 @@ const App = () => {
     <div>
       <h1 className="pageHeading">{pageHeading}</h1>
       <div className="cardDiv">
-        {Data.map((item) => (
-          <Card cardTitle={item.title} cardBody={item.para} />
+        {Data.map((item, index) => (
+          <Card key={index} cardTitle={item.title} cardBody={item.para} />
         ))}
       </div>
     </div>
