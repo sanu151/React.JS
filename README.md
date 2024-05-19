@@ -194,3 +194,6 @@ JSX offers a few methods for incorporating CSS styles into your React components
 2. **Inline Styles:** While less preferred due to potential readability issues, you can define styles directly within your JSX using a JavaScript object within curly braces `{}`. This approach is generally used for one-off styling or dynamic styles based on props.
 
 3. **CSS-in-JS Libraries:** These libraries allow you to write CSS styles directly within your JavaScript files using techniques like styled components or emotion. This offers features like scoped styles and easier styling of dynamic components, but adds another layer of complexity.
+
+**React Component**
+
