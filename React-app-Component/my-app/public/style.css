@@ -5,7 +5,10 @@
 
 .cardDiv {
   display: flex;
+  flex-wrap: wrap;
   border: none;
+  text-align: center;
+  justify-content: center;
 }
 
 .pageHeading {
@@ -24,7 +27,7 @@
   margin: 10px;
   border-radius: 5px;
   box-shadow: 2px 2px 4px gray;
-  width: 40%;
+  width: 45%;
 }
 
 .cardTitle {
