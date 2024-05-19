@@ -13,21 +13,22 @@ const monthName = date.getMonth();
 const yearName = date.getFullYear();
 
 const authorSpan = {
-  display: "flex",
-  marginLeft: "auto",
+  padding: "20px",
 };
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <div>
-    <h1 className="blogHeading largeText">{blogHeading}</h1>
-    <h3 className="blogTitle">{blogTitle}</h3>
-    <p className="blogPara">{blogPara}</p>
-    <p>
-      <span>{blogAuthor}</span>{" "}
-      <span style={authorSpan}>
-        {dateName + "/" + monthName + "/" + yearName}
-      </span>
-    </p>
+    <h1 className="blogHeading">{blogHeading}</h1>
+    <div className="card">
+      <h3 className="cardTitle">{blogTitle}</h3>
+      <p className="cardDesc">{blogPara}</p>
+      <p className="footer">
+        <span>{blogAuthor}</span>{" "}
+        <span style={authorSpan}>
+          {dateName + "/" + monthName + "/" + yearName}
+        </span>
+      </p>
+    </div>
   </div>
 );

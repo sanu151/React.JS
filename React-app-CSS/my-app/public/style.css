@@ -1,3 +1,7 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 .blogHeading {
   background-color: purple;
   color: white;
@@ -5,19 +9,26 @@
   text-align: center;
 }
 
-.largeText {
-  font-size: 2.5rem;
+.card {
+  background: #ffda77;
+  box-shadow: 2px 2px 4px gray;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 15px;
+  width: 400px;
 }
 
-.blogTitle {
+.cardTitle {
   text-align: center;
-  font-weight: bold;
-  text-decoration: underline;
+  margin-bottom: 5px;
+}
+
+.cardDesc {
   color: blue;
 }
 
-.blogPara {
-  font-family: Arial, Helvetica, sans-serif;
-  text-align: justify;
-  background-color: yellow;
+.footer {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 5px;
 }
