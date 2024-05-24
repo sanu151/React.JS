@@ -259,5 +259,48 @@ import { v4 as uuidv4 } from 'uuid';
 uuidv4(); // ⇨ '9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d'
 ```
 
-**React Project Template from Anisul Islam**
+**Class Component**
+
+In React, class components are a way to define reusable code blocks for your application's UI. They are built using JavaScript classes that inherit from the built-in `React.Component` class. While still supported, React recommends using function components for new projects due to their simplicity and other benefits.
+
+Here's a breakdown of key aspects of React class components:
+
+**Structure:**
+
+- Class components extend the `React.Component` class.
+- They typically have a render method that defines the component's UI using JSX. 
+- The render method receives the `props` (properties) object as an argument and  returns JSX elements describing the UI.
+
+**Key Methods:**
+
+- **render():** This is the required method in a class component. It takes the `props` and `state` (explained below) of the component and returns the JSX structure that represents the UI.
+- **constructor(props):** This is an optional method where you can initialize the component's state using `this.state = { ... }`.
+
+**State Management:**
+
+- Class components can have internal state to store data specific to the component.
+- State updates trigger the component to re-render with the updated data.
+- You use the `setState()` method to update the component's state.
+
+**Advantages of Class Components (compared to Function Components):**
+
+- More complex UIs with lifecycle methods (e.g., `componentDidMount`, `componentDidUpdate`) for handling different stages of a component's lifecycle.
+- Easier to manage complex state logic.
+
+**Disadvantages (compared to Function Components):**
+
+- Considered slightly more verbose and complex compared to function components.
+- Can be harder to reason about due to separate render and state logic.
+
+Here's a simple example of a React class component:
+
+```javascript
+class Greeting extends React.Component {
+  render() {
+    return <h1>Hello, {this.props.name}!</h1>;
+  }
+}
+```
+
+Even though React recommends function components for new projects, understanding class components is still valuable, especially if you're working on existing codebases that use them.
 
