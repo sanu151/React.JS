@@ -295,7 +295,9 @@ Here's a breakdown of key aspects of React class components:
 Here's a simple example of a React class component:
 
 ```javascript
-class Greeting extends React.Component {
+import React, { Component } from 'react'
+
+class Greeting extends Component {
   render() {
     return <h1>Hello, {this.props.name}!</h1>;
   }
