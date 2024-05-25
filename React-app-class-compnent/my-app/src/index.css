@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.cardDiv {
+  margin: 10px;
+  border: 2px solid blue;
+  background-color: yellowgreen;
+  padding: 15px;
+  width: 30%;
+  justify-content: center;
+}
+
+.cardTitle {
+  color: white;
+  padding: 10px;
+}
+
+.cardDesc {
+  color: red;
+  padding: 10px;
+}
