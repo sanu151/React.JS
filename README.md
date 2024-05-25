@@ -308,3 +308,38 @@ Even though React recommends function components for new projects, understanding
 
 **React component under the hood**
 
+In React, the magic behind JSX (the fancy HTML-like syntax you write for components) lies in a function called `React.createElement`. This function is the workhorse that takes your component descriptions and transforms them into a special data structure that React understands.
+
+Here's a glimpse into what happens under the hood:
+
+**JSX to `createElement`:**
+
+- During compilation (usually handled by tools like Babel), JSX gets converted into calls to `React.createElement`.
+- So, your code with JSX like `<div><h1>Hello</h1></div>` becomes something like `React.createElement('div', null, React.createElement('h1', null, 'Hello'))`.
+
+**What `createElement` Does:**
+
+1. **Validating Element Type:**
+   - It checks if the first argument (often a string like `"div"`) is a valid element type (HTML tag, component function, or special symbols like `React.Fragment`).
+
+2. **Creating the React Element:**
+   - If valid, it creates a lightweight JavaScript object representing the React element.
+   - This object typically contains properties like:
+      - `type`: The type of element (e.g., `"div"`, component function)
+      - `props`: An object containing attributes/properties passed to the element (if any)
+      - `children`: An array containing child elements (other JSX elements converted to React elements)
+
+3. **Validating Props and Children:**
+   - React might perform additional checks on props and children depending on the element type. 
+
+**Key Points to Remember:**
+
+- `React.createElement` is the foundation for building React components.
+- It transforms JSX syntax into a structured representation that React uses for rendering.
+- While you might not directly use `createElement` in your code, understanding its role goes a long way in appreciating how React works.
+
+**Additional Resources:**
+
+- You can find the official documentation for `React.createElement` although it's considered a legacy API: [https://react.dev/reference/react/createElement](https://react.dev/reference/react/createElement)
+- For a deeper dive into the inner workings of `createElement`, you can explore articles like: [https://github.com/mnindrazaka](https://github.com/mnindrazaka)
+
