@@ -306,3 +306,5 @@ class Greeting extends Component {
 
 Even though React recommends function components for new projects, understanding class components is still valuable, especially if you're working on existing codebases that use them.
 
+**React component under the hood**
+
