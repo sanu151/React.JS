@@ -347,5 +347,39 @@ Here's a glimpse into what happens under the hood:
 
 **React Icons**
 
-Source : https://react-icons.github.io/react-icons/
+**Source :** https://react-icons.github.io/react-icons/
+
+React Icons refers to two main things in the world of React development:
+
+1. **Icon libraries:** There are many popular icon libraries that provide icon components specifically designed for use in React projects. These libraries offer a wide variety of icons, often with different styles and themes to choose from. Some popular examples include Font Awesome, Material Design Icons, Bootstrap Icons, and many more.
+
+2. **react-icons package:** This is a utility package that simplifies using icons from various icon libraries within your React application. It provides a single entry point to import icons from different libraries and offers features like tree-shaking, which helps reduce bundle size by only including the icons you actually use.
+
+
+Installation (for standard modern project)
+```
+npm install react-icons --save
+```
+Font Awsome 6:
+
+Import
+```
+import { IconName } from "react-icons/fa6";
+```
+Example:
+
+Icon: ![image](https://github.com/sanu151/React.JS/assets/68671274/50bf6ae2-51ee-40c0-9ec1-90d99abcbacd)
+
+```
+import { FaReact } from "react-icons/fa";
+
+function App(){
+  return <div>
+    <FaReact />
+  </div>
+}
+export default App;
+```
+
+**React wit Bootstrap**
 
