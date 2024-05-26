@@ -345,3 +345,7 @@ Here's a glimpse into what happens under the hood:
 - You can find the official documentation for `React.createElement` although it's considered a legacy API: [https://react.dev/reference/react/createElement](https://react.dev/reference/react/createElement)
 - For a deeper dive into the inner workings of `createElement`, you can explore articles like: [https://github.com/mnindrazaka](https://github.com/mnindrazaka)
 
+**React Icons**
+
+Source : https://react-icons.github.io/react-icons/
+
