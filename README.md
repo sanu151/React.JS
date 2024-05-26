@@ -368,7 +368,9 @@ import { IconName } from "react-icons/fa6";
 ```
 Example:
 
-Icon: ![image](https://github.com/sanu151/React.JS/assets/68671274/50bf6ae2-51ee-40c0-9ec1-90d99abcbacd)
+Icon:
+
+![image](https://github.com/sanu151/React.JS/assets/68671274/50bf6ae2-51ee-40c0-9ec1-90d99abcbacd)
 
 ```
 import { FaReact } from "react-icons/fa";
