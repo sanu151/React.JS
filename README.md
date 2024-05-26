@@ -244,6 +244,8 @@ The `uuid` package offers various functions to generate different versions of UU
 * **v4 (random):** Generates random UUIDs. These are not guaranteed to be globally unique, but the probability of collision is very low.
 * **v5 (name-based and SHA-1 hash):** Generates UUIDs based on a namespace and a string value hashed with SHA-1.
 
+**Link :** https://www.npmjs.com/package/uuid
+
 Here's an example of generating a v4 UUID:
 
 ```javascript
