@@ -506,3 +506,75 @@ function Counter() {
 
 export default Counter;
 ```
+
+**Conditional Rendering | ternary, short circuit**
+
+Conditional rendering in React.js allows you to control which JSX elements are displayed based on certain conditions. This makes your components more flexible and responsive to user interactions or changes in data.
+
+Here are the common ways to achieve conditional rendering in React:
+
+1. **If-Else Statements:**
+
+   You can use regular JavaScript if-else statements within the `return` statement of your component function. The condition determines which JSX element to render.
+
+   ```javascript
+   function Login() {
+     const isLoggedIn = true; // Replace with your logic
+
+     if (isLoggedIn) {
+       return <p>Welcome back!</p>;
+     } else {
+       return <p>Please log in.</p>;
+     }
+   }
+   ```
+
+2. **Ternary Operator:**
+
+   The ternary operator provides a more concise syntax for conditional rendering within JSX. It follows the format:
+
+   ```jsx
+   condition ? elementIfTrue : elementIfFalse
+   ```
+
+   ```javascript
+   function Message() {
+     const hasNewMessage = false; // Replace with your logic
+
+     return (
+       <div>
+         {hasNewMessage ? <p>You have a new message!</p> : null}
+       </div>
+     );
+   }
+   ```
+
+3. **Logical AND Operator (&&):**
+
+   You can leverage the logical AND operator (`&&`) to conditionally render JSX elements. The element following the `&&` operator will only be rendered if the condition on the left-hand side evaluates to `true`.
+
+   ```javascript
+   function ShowContent() {
+     const isLoading = false; // Replace with your logic
+     const content = "This is some content.";
+
+     return (
+       <div>
+         {!isLoading && <p>{content}</p>}
+       </div>
+     );
+   }
+   ```
+
+**Choosing the Right Method:**
+
+- For simple conditions, the ternary operator or logical AND operator might be more readable.
+- For complex conditions with multiple elements to render, using an if-else statement can improve readability. 
+
+**Additional Considerations:**
+
+- Remember to avoid directly modifying the state within conditional statements. Use the `setState` method for controlled updates.
+- When dealing with complex conditional logic, consider extracting reusable components to enhance code maintainability.
+
+By effectively using conditional rendering, you can create dynamic and interactive React components that adapt to different states and user interactions.
+
