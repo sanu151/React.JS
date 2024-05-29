@@ -578,3 +578,78 @@ Here are the common ways to achieve conditional rendering in React:
 
 By effectively using conditional rendering, you can create dynamic and interactive React components that adapt to different states and user interactions.
 
+**React Hooks | useState hook**
+
+React hooks are a new feature introduced in React 16.8 that allows you to use state and other React features without writing a class component. This can make your components more concise and easier to understand.
+
+Here are some of the benefits of using React hooks:
+
+* **Improved code readability:** Hooks can make your code more readable by separating the logic for managing state and side effects from the component's render function.
+* **Easier code reuse:** Hooks can be reused across different components, promoting code reusability.
+* **Better tooling support:** Hooks are better supported by modern tooling, such as linters and debuggers.
+
+Some of the common React hooks include:
+
+* `useState`: This hook allows you to add state to a functional component.
+* `useEffect`: This hook allows you to perform side effects in your functional component, such as fetching data, subscriptions, or manual DOM manipulation.
+* `useContext`: This hook allows you to access context data from a functional component.
+
+If you're new to React hooks, there are many resources available online to help you learn more about them, including the official React documentation [https://legacy.reactjs.org/docs/hooks-intro.html](https://legacy.reactjs.org/docs/hooks-intro.html).
+
+**useState hook**
+
+The `useState` hook is a fundamental building block for managing state in React functional components. It allows you to declare state variables and a function to update them directly within the component.
+
+Here's a breakdown of how `useState` works:
+
+**Functionality:**
+
+* Adds state to functional components.
+* Tracks data or properties that change within the component.
+* Can store various data types like strings, numbers, booleans, arrays, or objects.
+
+**Usage:**
+
+```javascript
+import React, { useState } from 'react';
+
+function MyComponent() {
+  const [count, setCount] = useState(0);
+
+  // Increment the count
+  const handleClick = () => {
+    setCount(count + 1);
+  };
+
+  return (
+    <div>
+      <p>You clicked {count} times</p>
+      <button onClick={handleClick}>Click me</button>
+    </div>
+  );
+}
+```
+
+**Explanation:**
+
+1. We import `useState` from `react`.
+2. Inside the component, we call `useState(initialState)` which returns an array with two elements.
+   - The first element is the current state value (`count` in this case), initialized with `0`.
+   - The second element is a function to update the state (`setCount`).
+3. We use destructuring assignment to unpack the array into separate variables: `count` and `setCount`.
+4. The `handleClick` function increments the count by calling `setCount(count + 1)`.
+5. The component renders the current count and a button that triggers the `handleClick` function on click.
+
+**Key Points:**
+
+* You can call `useState` multiple times within a component to manage different state variables.
+* `useState` can only be called at the top level of your component or within custom hooks.
+* The initial state passed to `useState` can be any data type.
+
+**Benefits:**
+
+* Improves code readability by separating state management from the render function.
+* Makes components more concise and easier to maintain.
+
+By effectively using the `useState` hook, you can create dynamic and interactive React components that respond to user interactions and data changes.
+
