@@ -687,3 +687,59 @@ Here are some resources for further learning:
 - React Docs on useState: [https://legacy.reactjs.org/docs/hooks-state.html](https://legacy.reactjs.org/docs/hooks-state.html)
 - Common Mistakes with useState: [https://m.youtube.com/watch?v=-yIsQPp31L0](https://m.youtube.com/watch?v=-yIsQPp31L0)
 
+**Event Bubbling | stopPropagation**
+
+Event bubbling is a default behavior in web development, specifically in the Document Object Model (DOM). When an event occurs on an element within a nested element structure, the event propagates or "bubbles" up the DOM tree to its parent elements.
+
+- In web development, event bubbling is the default behavior of how events propagate through the Document Object Model (DOM) tree.
+- When an event occurs on an element, it first triggers on that element itself. 
+- Then, if the event isn't stopped, it bubbles up to its parent element, and then the parent's parent, and so on until it reaches the document object.
+
+**Imagine a nested set of boxes:**
+
+- Clicking the inner box would trigger the click event on that box first.
+- If not stopped, the event would then bubble up to the enclosing box and trigger its click event as well.
+
+**Why is Event Bubbling Useful?**
+
+- Event bubbling allows you to attach a single event listener to a parent element and handle events for all its children without adding individual listeners to each child.
+- This can simplify event handling and reduce code duplication.
+
+**For Example:**
+
+- You can attach a click event listener to a container element and handle clicks on any of its descendants (inner elements).
+
+**stopPropagation**
+
+- The `stopPropagation` method is a property of the event object in JavaScript.
+- It's used to stop the event from bubbling up the DOM tree any further.
+- Once called on an event object within an event handler function, it prevents the event from propagating to parent elements.
+
+**When to Use stopPropagation**
+
+- Use `stopPropagation` cautiously to avoid unintended consequences.
+- It's helpful when you want to handle an event on a specific element and don't want it to trigger any additional events on parent elements.
+
+**Example:**
+
+```javascript
+const container = document.getElementById('container');
+const innerElement = document.getElementById('inner-element');
+
+container.addEventListener('click', (event) => {
+  console.log('Container Clicked');
+  event.stopPropagation(); // Stops bubbling to document
+});
+
+innerElement.addEventListener('click', (event) => {
+  console.log('Inner Element Clicked');
+});
+```
+
+In this example, clicking the inner element would only log "Inner Element Clicked" because `stopPropagation` is called in the container's event handler.
+
+**Key Points:**
+
+- Event bubbling is the default behavior of event propagation.
+- `stopPropagation` stops the event from bubbling further up the DOM tree.
+- Use `stopPropagation` judiciously to avoid disrupting expected behavior.
