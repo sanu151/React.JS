@@ -653,3 +653,37 @@ function MyComponent() {
 
 By effectively using the `useState` hook, you can create dynamic and interactive React components that respond to user interactions and data changes.
 
+**Update useState**
+
+In React, the `useState` hook is used to manage the state of functional components. There are two ways to update the state:
+
+1. **Direct Update:** This is generally discouraged because it can lead to unexpected behavior. You directly assign a new value to the state variable using the setter function.
+
+```javascript
+const [count, setCount] = useState(0);
+
+const handleClick = () => {
+  setCount(count + 1); // Direct Update (Not recommended)
+}
+```
+
+2. **Functional Update:** This is the recommended approach. You call the setter function and pass it a callback function. This callback function receives the current state value as an argument, allowing you to calculate the new state based on the current one.
+
+```javascript
+const [count, setCount] = useState(0);
+
+const handleClick = () => {
+  setCount(prevCount => prevCount + 1); // Functional Update
+}
+```
+
+Here's why functional updates are preferred:
+
+- **Ensures predictable updates:** It guarantees that the update is based on the latest state value, even if multiple updates are happening close together.
+- **Updating objects and arrays:** When dealing with objects or arrays in the state, you should create a new copy with the updated values instead of modifying the existing one directly. Functional updates make it easier to achieve this using spread syntax (`...`).
+
+Here are some resources for further learning:
+
+- React Docs on useState: [https://legacy.reactjs.org/docs/hooks-state.html](https://legacy.reactjs.org/docs/hooks-state.html)
+- Common Mistakes with useState: [https://m.youtube.com/watch?v=-yIsQPp31L0](https://m.youtube.com/watch?v=-yIsQPp31L0)
+
