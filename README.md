@@ -743,3 +743,4 @@ In this example, clicking the inner element would only log "Inner Element Clicke
 - Event bubbling is the default behavior of event propagation.
 - `stopPropagation` stops the event from bubbling further up the DOM tree.
 - Use `stopPropagation` judiciously to avoid disrupting expected behavior.
+
