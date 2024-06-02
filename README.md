@@ -840,4 +840,57 @@ Here's how to collect form data in React using controlled components:
 - **Error Handling:** Consider adding error handling mechanisms to display user-friendly messages if there's an issue submitting the form data (e.g., network errors).
 - **Form Libraries:** Explore third-party form libraries like `Formik` or `react-hook-form` that provide advanced features like validation, field handling, and form state management.
 - **Accessibility:** Make sure your forms are accessible to users with disabilities by adding appropriate labels
-- 
+
+**Passing data from Child to Parent component**
+
+In React, data typically flows downwards from parent to child components using props. However, there are scenarios where you might need to pass data back up from a child component to its parent. Here are method to achieve this:
+
+**Callback Function:**
+
+   - **Parent Component:**
+     - Define a callback function within the parent component that will be used to receive data from the child.
+     - Pass this callback function as a prop to the child component.
+
+   - **Child Component:**
+     - When the child has data to send to the parent, it calls the callback function received as a prop, passing the data as an argument.
+
+   **Example:**
+
+   ```javascript
+   // Parent component (Parent.js)
+   import React, { useState } from 'react';
+
+   function Parent() {
+       const [dataFromChild, setDataFromChild] = useState(null);
+
+       const handleDataFromChild = (data) => {
+           setDataFromChild(data);
+       };
+
+       return (
+           <div>
+               <Child onSendData={handleDataFromChild} />
+               {dataFromChild && <p>Data from child: {dataFromChild}</p>}
+           </div>
+       );
+   }
+
+   export default Parent;
+
+   // Child component (Child.js)
+   import React from 'react';
+
+   function Child({ onSendData }) {
+       const handleClick = () => {
+           const dataToSend = 'Hello from child!';
+           onSendData(dataToSend);
+       };
+
+       return (
+           <button onClick={handleClick}>Send data</button>
+       );
+   }
+
+   export default Child;
+   ```
+
