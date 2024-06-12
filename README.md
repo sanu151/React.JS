@@ -896,3 +896,111 @@ In React, data typically flows downwards from parent to child components using p
    export default Child;
    ```
 
+**Control Form Data using Formik**
+
+**Link :** https://formik.org/docs/overview
+
+Formik is a popular form management library for React that simplifies handling form data, validation, and submission. Here's a breakdown of how to control form data using Formik in React:
+
+**1. Installation:**
+
+Start by installing the Formik library using npm or yarn:
+
+```bash
+npm install formik
+```
+
+**2. Import Necessary Components:**
+
+Import the required components from Formik in your React component:
+
+```javascript
+import React from 'react';
+import { Formik, Field, ErrorMessage } from 'formik';
+```
+
+**3. Define Initial Form Values:**
+
+Create an object to hold the initial values for your form fields:
+
+```javascript
+const initialValues = {
+  name: '',
+  email: '',
+  message: '',
+};
+```
+
+**4. Build the Form with Formik:**
+
+Wrap your form content inside the `Formik` component. Provide the `initialValues` prop and a function called `onSubmit` that will handle form submission:
+
+```javascript
+<Formik initialValues={initialValues} onSubmit={(values) => {
+  // Handle form submission here (e.g., send data to server)
+  console.log(values); // Access submitted form data
+}}>
+  {/* Form fields and submit button go here */}
+</Formik>
+```
+
+**5. Create Form Fields with Field Component:**
+
+Use the `Field` component for each input field in your form. It takes several props to configure the field:
+
+- `name`: A unique identifier for the field, used to access its value in the form state.
+- `type`: The type of input field (e.g., "text", "email", "password").
+- `placeholder`: Placeholder text displayed in the field when empty.
+
+```javascript
+<Field type="text" name="name" placeholder="Enter your name" />
+<Field type="email" name="email" placeholder="Enter your email" />
+<Field as="textarea" name="message" placeholder="Write your message" />
+```
+
+**6. Handle Form Submission:**
+
+The `onSubmit` function provided to the `Formik` component receives the submitted form data as an argument. Access individual field values using their corresponding names:
+
+```javascript
+onSubmit={(values) => {
+  console.log('Name:', values.name);
+  console.log('Email:', values.email);
+  console.log('Message:', values.message);
+  // Perform actions with the data (e.g., send to server)
+}}
+```
+
+**7. Display Validation Errors (Optional):**
+
+Use the `ErrorMessage` component to display validation errors for specific fields. It takes the field `name` as a prop and displays the error message returned by the validation schema (explained later).
+
+```javascript
+<ErrorMessage name="name" component="div" className="error-message" />
+```
+
+**8. Form Validation using yup (Optional):**
+
+Formik integrates well with the yup library for defining validation rules for your form fields. You can create a yup schema object that defines validation rules for each field. The schema is then passed to the `validationSchema` prop of the `Formik` component.
+
+**Example with yup validation:**
+
+```javascript
+import * as yup from 'yup';
+
+const validationSchema = yup.object({
+  name: yup.string().required('Name is required'),
+  email: yup.string().email('Invalid email format').required('Email is required'),
+  message: yup.string().required('Message is required'),
+});
+
+<Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={(values) => {
+  // Handle form submission here
+}}>
+  {/* Form fields and submit button go here */}
+</Formik>
+```
+
+This example defines validation rules for each field using yup. The `ErrorMessage` component will automatically display these errors when encountered during form submission.
+
+By following these steps, you can effectively control form data using Formik in your React applications. Formik provides a clean and efficient way to handle form state, validation, and submission, improving the user experience and data integrity in your forms.
