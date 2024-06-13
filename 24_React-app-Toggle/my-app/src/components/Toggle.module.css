@@ -1,0 +1,14 @@
+.btnDiv {
+  text-align: center;
+}
+
+.paraDiv {
+  background-color: red;
+  color: white;
+  margin: 1rem;
+  padding: 1rem;
+}
+
+button {
+  margin: 0.3rem;
+}
