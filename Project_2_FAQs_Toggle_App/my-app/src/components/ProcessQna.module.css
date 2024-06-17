@@ -1,0 +1,37 @@
+.articleQnA {
+  border: 2px solid#222;
+  border-radius: 5px;
+  padding: 5px 20px;
+  margin-bottom: 3px;
+}
+.articalDiv {
+  display: flex;
+}
+
+.questions {
+  display: flex;
+  width: 95%;
+  color: aqua;
+}
+
+.answers {
+  padding: 2px 20px;
+  color: wheat;
+}
+
+.button {
+  background-color: aqua;
+  color: brown;
+  font-weight: bold;
+  height: 30px;
+  width: 30px;
+  border-radius: 15px;
+  margin-top: 15px;
+}
+
+.button:hover {
+  background-color: brown;
+  color: aqua;
+  font-weight: bold;
+  border-radius: 20px;
+}
